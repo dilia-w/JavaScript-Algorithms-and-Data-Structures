@@ -1,27 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebGL Triangle</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roman Numeral Converter</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <canvas width=500px height=500px ></canvas>
-    <div>
-        <button id="startButton">Start Movement</button>
+  <main>
+    <h1>Roman Numeral Converter</h1>
+    <label for="palindrome">Enter a Number:</label>
+    <input id="number">
+    <button type="button" id="convert-btn">Convert</button>
+    <div id="output">
     </div>
-    <div>
-        <label for="ySlider">Move Y: </label>
-        <input type="range" id="ySlider" min="-1" max="1" step="0.01" value="0">
-    </div>
-    <div>
-        <label for="Angulo">Roda Roda: </label>
-        <input type="range" id="Angulo" min="0" max="360" step="1" value="0">
-    </div>
-    <div>
-        <label for="Angulo">Tamanho: </label>
-        <input type="range" id="escala" min="0" max="5" step="0.1" value="1">
-    </div>
-    <script src="script.js"></script>
+  </main>
+  <script src="./script.js"></script>
 </body>
 </html>
