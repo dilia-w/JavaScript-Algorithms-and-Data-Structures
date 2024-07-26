@@ -1,27 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebGL Triangle</title>
-</head>
-<body>
-    <canvas width=500px height=500px ></canvas>
-    <div>
-        <button id="startButton">Start Movement</button>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js"></script>
+    <title>Statistics Calculator</title>
+  </head>
+  <body>
+    <h1>Statistics Calculator</h1>
+    <p>Enter a list of comma-separated numbers.</p>
+    <form onsubmit="calculate(); return false;">
+      <label for="numbers">Numbers:</label>
+      <input type="text" name="numbers" id="numbers" />
+      <button type="submit">Calculate</button>
+    </form>
+    <div class="results">
+      <p>
+        The <dfn>mean</dfn> of a list of numbers is the average, calculated by
+        taking the sum of all numbers and dividing that by the count of numbers.
+      </p>
+      <p class="bold">Mean: <span id="mean"></span></p>
+      <p>
+        The <dfn>median</dfn> of a list of numbers is the number that appears in
+        the middle of the list, when sorted from least to greatest.
+      </p>
+      <p class="bold">Median: <span id="median"></span></p>
+      <p>
+        The <dfn>mode</dfn> of a list of numbers is the number that appears most
+        often in the list.
+      </p>
+      <p class="bold">Mode: <span id="mode"></span></p>
+      <p>
+        The <dfn>range</dfn> of a list of numbers is the difference between the
+        largest and smallest numbers in the list.
+      </p>
+      <p class="bold">Range: <span id="range"></span></p>
+      <p>
+        The <dfn>variance</dfn> of a list of numbers measures how far the values
+        are from the mean, on average.
+      </p>
+      <p class="bold">Variance: <span id="variance"></span></p>
+      <p>
+        The <dfn>standard deviation</dfn> of a list of numbers is the square
+        root of the variance.
+      </p>
+      <p class="bold">
+        Standard Deviation: <span id="standardDeviation"></span>
+      </p>
     </div>
-    <div>
-        <label for="ySlider">Move Y: </label>
-        <input type="range" id="ySlider" min="-1" max="1" step="0.01" value="0">
-    </div>
-    <div>
-        <label for="Angulo">Roda Roda: </label>
-        <input type="range" id="Angulo" min="0" max="360" step="1" value="0">
-    </div>
-    <div>
-        <label for="Angulo">Tamanho: </label>
-        <input type="range" id="escala" min="0" max="5" step="0.1" value="1">
-    </div>
-    <script src="script.js"></script>
-</body>
+  </body>
 </html>
